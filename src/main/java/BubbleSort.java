@@ -9,7 +9,13 @@ public class BubbleSort {
      *       This optimization ensures the algorithm stops early if the array is already sorted.
      */
     public void sort (Comparable[] a){
-//        write your code here.
+        for (int i = 0; i < a.length - 1; i++) {
+            for(int j = 0; j < a.length - i - 1; j++){
+                if(a[j].compareTo(a[j+1]) > 0){
+                    swap(a, j, j+1);
+                }
+            }
+        }
 
     }
     /**
